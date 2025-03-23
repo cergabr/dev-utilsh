@@ -5,4 +5,10 @@ external-sources=true
 source-path=lib
 
 # Specify shell dialect
-shell=bash 
+shell=bash
+
+# Enable shellcheck's built-in checks
+builtin=true
+
+# Enable shellcheck's built-in checks
+builtin=true
