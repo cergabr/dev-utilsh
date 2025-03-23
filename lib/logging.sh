@@ -8,20 +8,36 @@ fi
 
 # Print a header with color
 utilsh::print_header() {
-    echo -e "\n${GREEN}=== $1 ===${NC}"
+    local color="$2"
+    if [[ -z "$color" ]]; then
+        color="$CYAN_BOLD"
+    fi
+    echo -e "\n${color}=== $1 ===${NC}"
 }
 
 # Print an info message
 utilsh::print_info() {
-    echo -e "${GREEN}$1${NC}"
+    local color="$2"
+    if [[ -z "$color" ]]; then
+        color="$GREEN"
+    fi
+    echo -e "${color}$1${NC}"
 }
 
 # Print a warning message
 utilsh::print_warning() {
-    echo -e "${YELLOW}$1${NC}"
+    local color="$2"
+    if [[ -z "$color" ]]; then
+        color="$YELLOW"
+    fi
+    echo -e "${color}$1${NC}"
 }
 
 # Print an error message
 utilsh::print_error() {
-    echo -e "${RED}$1${NC}"
+    local color="$2"
+    if [[ -z "$color" ]]; then
+        color="$RED"
+    fi
+    echo -e "${color}$1${NC}"
 }

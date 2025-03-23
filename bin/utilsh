@@ -32,6 +32,9 @@ case "$1" in
   error)
     utilsh::print_error "${2:-No text provided}"
     ;;
+  test)
+    utilsh::print_test "${2:-No text provided}"
+    ;;
   --version|-v)
     echo "v$PKG_VERSION"
     ;;
