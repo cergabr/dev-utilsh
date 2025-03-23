@@ -9,7 +9,7 @@ A collection of shell utilities for developers.
 If you have [Basher](https://github.com/basherpm/basher) installed:
 
 ```bash
-basher install username/dev-utilsh
+basher install cergabr/dev-utilsh
 ```
 
 ### Manual Installation
