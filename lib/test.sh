@@ -1,6 +1,6 @@
 # Test a message with a specific color interactively
 
-utilsh::test::color() {
+utilsh::test() {
   # Arrays of available methods and colors
   local methods=("header" "info" "warning" "error" "debug")
   local colors=("BLACK" "RED" "GREEN" "YELLOW" "BLUE" "MAGENTA" "CYAN" "WHITE")
