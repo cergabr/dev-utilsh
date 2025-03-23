@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Main executable for dev-utilsh package
+# Executable for dev-utilsh package
 
 if [[ -n "${BASH_SOURCE[0]}" ]]; then
   SCRIPT_PATH="${BASH_SOURCE[0]}"
@@ -16,11 +16,9 @@ done
 SCRIPT_DIR="$( cd -P "$( dirname "$SCRIPT_PATH" )" && pwd )"
 PKG_ROOT="$( dirname "$SCRIPT_DIR" )"
 
-# Source the utilities
 # shellcheck source=../lib/init.sh
 source "$PKG_ROOT/lib/init.sh"
 
-# Parse command-line arguments
 case "$1" in
   header)
     utilsh::print_header "${2:-No text provided}"
@@ -35,7 +33,7 @@ case "$1" in
     utilsh::print_error "${2:-No text provided}"
     ;;
   version)
-    echo "dev-utilsh version $UTILS_VERSION"
+    echo "dev-utilsh version $PKG_VERSION"
     ;;
   *)
     echo "Usage: utilsh [command] [text]"
