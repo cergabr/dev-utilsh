@@ -26,13 +26,13 @@ case "$1" in
   info)
     utilsh::print_info "${2:-No text provided}"
     ;;
-  warning)
+  warn)
     utilsh::print_warning "${2:-No text provided}"
     ;;
   error)
     utilsh::print_error "${2:-No text provided}"
     ;;
-  version|--version|-v)
+  --version|-v)
     echo "v$PKG_VERSION"
     ;;
   *)
@@ -41,9 +41,8 @@ case "$1" in
     echo "Commands:"
     echo "  header   - Print a header message"
     echo "  info     - Print an info message"
-    echo "  warning  - Print a warning message"
+    echo "  warn  - Print a warning message"
     echo "  error    - Print an error message"
-    echo "  version  - Show version info"
     echo ""
     echo "Options:"
     echo "  --version, -v - Show version info"
