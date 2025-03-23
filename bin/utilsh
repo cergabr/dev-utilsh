@@ -33,7 +33,7 @@ case "$1" in
     utilsh::print_error "${2:-No text provided}"
     ;;
   version)
-    echo "dev-utilsh version $PKG_VERSION"
+    echo "v$PKG_VERSION"
     ;;
   *)
     echo "Usage: utilsh [command] [text]"
